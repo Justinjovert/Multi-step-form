@@ -1,0 +1,122 @@
+body {
+    padding: 0;
+    margin: 0;
+
+
+    background-color: lightslategray;
+    min-height: 100dvh;
+
+}
+
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    width: min(95%, 1010px);
+    /* min-height: 500px; */
+    background-color: hotpink;
+    box-sizing: border-box;
+    position: relative;
+    padding: 20px;
+}
+
+.sidebar-container {
+    min-width: 180px;
+    background-color: lightskyblue;
+    border-radius: 20px;
+    min-height: 200px;
+    flex: 1 3 200px;
+}
+
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    /* min-width: 400px;
+    width: 100%; */
+    border-radius: 15px;
+    height: 500px;
+    box-sizing: border-box; 
+    flex: 3 1 500px;
+    margin-left: calc(2vw + 1rem);
+}
+
+.form-container {
+    background-color: antiquewhite;
+    padding: 0 5rem;
+    margin-top: 3rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-container > *{
+    margin: 0;
+    padding: 0;
+}
+
+.form-footer {
+    background-color: aliceblue;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: auto;
+    display: flex;
+}
+
+.form-footer>button {
+    margin-left: auto;
+}
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    display: none;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: gray;
+    }
+
+    .main-container {
+        /* 1direction: column; */
+        flex-wrap: wrap;
+        padding: 0;
+        width: 100%;
+    }
+
+
+    .sidebar-container {
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .form-wrapper {
+        margin: 0;
+    }
+
+    .form-container {
+        margin: 1rem;
+        z-index: 10;
+        padding: 1rem;
+        top: -20%;
+    }
+}
