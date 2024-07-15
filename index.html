@@ -8,6 +8,12 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
     <link rel="stylesheet" href='styles.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
 
     <title>Frontend Mentor | Multi-step form</title>
 
@@ -18,31 +24,173 @@
     <main class="main-wrapper">
         <section class="main-container">
             <section class="sidebar-container">
-                <div class="step">Step 1
-                    Your info</div>
-                <div class="step">Step 2
-                    Select plan</div>
-                <div class="step">Step 3
-                    Add-ons</div>
-                <div class="step">Step 4
-                    Summary</div>
-            </section>
-            <section class='form-wrapper'>
-                <section class="form-container">
-                    <h1>Personal Info</h1>
-                    <p>Please provide your name, email address, and phone number</p>
-                    <label>Name</label>
-                    <input placeholder="e.g. Stephen King">
-                    <label>Email Address</label>
-                    <input placeholder="e.g. stephenking@lorem.com">
-                    <label>Phone Number</label>
-                    <input placeholder="e.g. +1 234 567 890">
-                </section>
-                <div class="form-footer">
-                    <button>Next Step</button>
+                <div class="step">
+                    <i class="active-state">1</i>
+                    <div class='step-wrapper'>
+                        <div>Step 1</div>
+                        <span>Your info</span>
+                    </div>
+                </div>
+                <div class="step">
+                    <i>2</i>
+                    <div class='step-wrapper'>
+                        <div>Step 2</div>
+                        <span>Select Plan</span>
+                    </div>
+                </div>
+                <div class="step">
+                    <i>3</i>
+                    <div class='step-wrapper'>
+                        <div>Step 3</div>
+                        <span>Add-ons</span>
+                    </div>
+                </div>
+                <div class="step">
+                    <i>4</i>
+                    <div class='step-wrapper'>
+                        <div>Step 4</div>
+                        <span>Summary</span>
+                    </div>
                 </div>
             </section>
-        </section>
+            <section class='form-wrapper'>
+                <!-- <section data-step="1" class="form-container">
+                    <h1>Personal Info</h1>
+                    <p>Please provide your name, email address, and phone number</p>
+                    <div class="input-container">
+                        <div class="input-wrapper">
+                            <label>Name</label>
+                            <span class="error-state"></span>
+                        </div>
+                        <input placeholder="e.g. Stephen King">
+                    </div>
+                    <div class="input-container">
+                        <div class="input-wrapper">
+                            <label>Email Address</label>
+                            <span class="error-state"></span>
+                        </div>
+                        <input placeholder="e.g. stephenking@lorem.com">
+                    </div>
+                    <div class="input-container">
+                        <div class="input-wrapper">
+                            <label>Phone Number</label>
+                            <span class="error-state"></span>
+                        </div>
+                        <input placeholder="e.g. +1 234 567 890">
+                    </div>
+                </section> -->
+                <section data-step="2" class="form-container">
+                    <h1>Select your plan</h1>
+                    <p>You have the option of monthly or yearly billing.</p>
+                    <label class="radio-query active-query">
+                        <input type="radio" class="query-style">
+                        <span><img src="./assets/images/icon-arcade.svg"></span>
+                        <div class="rate-container">
+                            <div>Arcade</div>
+                            <span class="rate-line">$9/mo</span>
+                        </div>
+                    </label>
+                    <label class="radio-query">
+                        <input type="radio" class="query-style">
+                        <span><img src="./assets/images/icon-advanced.svg"></span>
+                        <div class="rate-container">
+                            <div>Advanced</div>
+                            <span class="rate-line">$12/mo</span>
+                        </div>
+                    </label>
+                    <label class="radio-query">
+                        <input type="radio" class="query-style">
+                        <span><img src="./assets/images/icon-pro.svg"></span>
+                        <div class="rate-container">
+                            <div>Pro</div>
+                            <span class="rate-line">$15/mo</span>
+                        </div>
+                    </label>
+                    <div class="term-container">
+                        <span class="term-inline active-term" >Monthly</span>
+                        <label class = "term-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="term-inline">Yearly</span>
+                    </div>
+                </section>
+                <!-- <section data-step="3" class="form-container">
+                    <h1>Pick add-ons</h1>
+                    <p>Add-ons help enhance your gaming experience.</p>
+                    <label class="addon-option active-addon">
+                        <input type="checkbox" checked>
+                        <div class="addon">
+                            <div>Online service</div>
+                            <span>Access to multiplayer games</span>
+                        </div>
+                        <span class ="addon-rate">+$1/mo</span>
+                    </label>
+                    <label class="addon-option">
+                        <input type="checkbox" checked>
+                        <div class="addon">
+                            <div>Larger Storage</div>
+                            <span>Extra 1TB of cloud save</span>
+                        </div>
+                        <span class ="addon-rate">+$2/mo</span>
+                    </label>
+                    <label class="addon-option">
+                        <input type="checkbox" checked>
+                        <div class="addon">
+                            <div>Customizable profile</div>
+                            <span>Custom theme on your profile</span>
+                        </div>
+                        <span class ="addon-rate">+$2/mo</span>
+                    </label>
+                </section>
+                <div class="form-footer">
+                    <button class="back-step">Go Back</button>
+                    <button class="next-step">Next Step</button>
+                </div>
+            </section> -->
+                <!-- <section data-step="4" class="form-container">
+                    <h1>Finishing up</h1>
+                    <p>Double-check everything that looks OK before confirming.</p>
+                    <div class="summary-container">
+                        <div class="user-plan-container">
+                            <div>
+                                Arcade <span data-term="monthly">(Monthly)</span>
+                                <div class="change-term">Change</div>
+                            </div>
+                            <span data-summary-term-rate>$9/mo</span>
+                        </div>
+                        <div class="user-addon-container">
+                            <div class="summary-addon">
+                                <span>Online service</span>
+                                <span data-summary-addon-rate>+$1/mo</span>
+                            </div>
+                            <div class="summary-addon">
+                                <span>Larger storage</span>
+                                <span data-summary-addon-rate>+$2/mo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total-price-container">
+                        <span>Total <span>(per month)</span></span>
+                        <span>+$12/mo</span>
+                    </div>
+                </section>
+                <div class="form-footer">
+                    <button class="back-step">Go Back</button>
+                    <button class="confirm-steps">CONFIRM</button>
+                </div> -->
+                <!-- <section data-completed class="form-container completed-form">
+                    <div>
+                        <img src="assets/images/icon-thank-you.svg">
+                    </div>
+                    <h1>Thank you!</h1>
+                    <p>
+                        Thanks for confirming your subscription! We hope you have fun
+                        using our platform. If you ever need support, please feel free
+                        to email us at support@loremgaming.com.
+                    </p>
+                </section> -->
+            </section>
     </main>
 
     <div style='display: none'>
